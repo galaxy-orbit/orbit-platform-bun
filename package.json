@@ -1,0 +1,45 @@
+{
+  "name": "@galaxy-stack/orbit-platform-bun",
+  "version": "0.1.7",
+  "description": "Bun.serve() adapter for Orbit",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun --packages external",
+    "dev": "bun --watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "changeset": "changeset"
+  },
+  "dependencies": {
+    "@galaxy-stack/orbit-core": "^0.1.4",
+    "@galaxy-stack/orbit-common": "^0.1.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0",
+    "reflect-metadata": "^0.2.2",
+    "@changesets/cli": "^2.27.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galaxy-orbit/orbit-platform-bun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/galaxy-orbit/orbit/issues"
+  },
+  "homepage": "https://galaxy-orbit-framework.vercel.app"
+}
